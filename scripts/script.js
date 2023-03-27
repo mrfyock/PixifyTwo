@@ -47,5 +47,27 @@ const imageSets = [
         'https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
       ]
     }
-
   ];
+
+//Create the gallery of submissions
+const displayGallery = (list) => {
+  const submissionsContainer = document.getElementById("submissions-container");
+  const allSubmissions = list.map(item => {
+    return `<div class="submission">
+              <img src=${item.images} alt=${item.title} class="submission-image"/>
+              <div class="submission-info">
+                <p>${item.title}</p>
+                <p>${item.name}</p>
+              </div>
+              <div>
+                <button class="view-gallery-btn">See More</button>
+              </div>
+            </div>`;
+  })
+  console.log(allSubmissions);
+  submissionsContainer.innerHTML = allSubmissions.join("");
+}
+
+window.onload = function() {
+  displayGallery(imageSets);
+}
