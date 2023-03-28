@@ -55,9 +55,8 @@ const displayGallery = (list) => {
   const allSubmissions = list.map(item => {
     return `<div class="submission">
               <img src=${item.images} alt=${item.title} class="submission-image"/>
-              <div class="submission-info">
-                <p>${item.title}</p>
-                <p>${item.name}</p>
+              <div>
+                <p class="submission-info">${item.title} - ${item.name}</p>
               </div>
               <div>
                 <button class="view-gallery-btn">See More</button>
@@ -71,3 +70,27 @@ const displayGallery = (list) => {
 window.onload = function() {
   displayGallery(imageSets);
 }
+
+// create darkmode / light mode functionality
+
+const darkmodeBtn = document.querySelector(".darkmode");
+
+const toggleMode = () => {
+ const body = document.querySelector("body");
+ const submissionHeader = document.querySelector("h2");
+ const submissionText = document.querySelector("#submissions-container"); 
+ if(body.style.backgroundColor === "white"){
+    body.style.backgroundColor = "#2A3B49";
+    submissionHeader.style.color = "white";
+    darkmodeBtn.innerHTML = "Light Mode";
+    submissionText.style.color = "white" 
+ }else{
+    body.style.backgroundColor = "white";
+    darkmodeBtn.innerHTML = "Dark Mode"; 
+    submissionHeader.style.color = "black";
+    submissionText.style.color = "black";
+ };
+}
+
+darkmodeBtn.onclick = toggleMode;
+
