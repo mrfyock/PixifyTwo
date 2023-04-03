@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.about{
+    color: white;
+    align-items: end; 
+    background-color: #2A3B49;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
+    padding: 50px;
+    border-radius: 120px 120px 120px 0;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(/assets/homepage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+h1{
+    color:#7BFFE9;
+    font-weight: 100;
+ }
+html, body{
+    height: 100%;
+    /* width: 100%; */
+}
+.footer{
+    grid-area: intro;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+ 
+
+.main{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "navbar navbar"                
+        "intro intro";
+ }
+
+.nav{
+    height: 50px;
+    grid-area: navbar;
+    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A3B49;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 110px;
+    width: 20%;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    background: transparent;
+    color: #7BFFE9;
+    border-radius: 90px;
+    font-size: 36px;
+    font-weight: 400;
+    border: 2px solid #7BFFE9;
+
+}
+.submit-btn a{
+    text-decoration: none;
+    color: #7BFFE9;
+}
+
+@media screen and (max-width: 1000px){
+    .about{
+        width:70%;
+    }
+}
+    
+@media screen and (max-width: 768px){
+    .submit-btn{
+        font-size: 24px;
+        /* font-weight: bold; */
+    }
+    .about{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 375px){
+    .about {
+        font-size: 12px;
+    }
+    .submit-btn{
+        font-size: 12px;
+        height: max-content;
+        padding: 5px;
+    }
+    .nav{
+        flex-direction: column;
+        height: 80px;
+    }
+}

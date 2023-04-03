@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixify</title>
+    <link rel="stylesheet" href="./styling/style2.css">
+</head>
+<body>
+    <div class="header">
+        <div>
+            <a href="index.html"><h1>Pixify</h1></a>
+        </div>
+        <div>
+            <a href="submissions.html" class="nav-link">2023 Submissions</a>
+            <a class="nav-link">About</a>
+            <button class="darkmode">Dark Mode</button>
+        </div>
+    </div>
+ 
+    <main>
+        <div class="container">
+            <h2 id="submission-header">2023 Submissions</h2>
+            <div id="submissions-container"></div>
+        </div>
+        
+        <form id="add-submission-form"> 
+            <h2>SUBMIT YOUR WORK</h2>
+            <div class="input-container">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="title" placeholder="Title of Your Entry" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="url-one" placeholder="Image Url One" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="url-two" placeholder="Image Url Two" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="url-three" placeholder="Image Url Three" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="url-four" placeholder="Image Url Four" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="url-five" placeholder="Image Url Five" required>
+            </div>
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+       
+    </main>
+<script src="./scripts/script.js"></script>
+</body>
+</html>
